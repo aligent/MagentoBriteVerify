@@ -1,0 +1,8 @@
+{
+    "name": "aligent/magento_brite_verify",
+    "type": "magento-module",
+    "description": "Aligent BriteVerify - Magento module to validate email addresses using the BriteVerify API.",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
