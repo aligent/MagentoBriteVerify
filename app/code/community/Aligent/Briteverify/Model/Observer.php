@@ -44,7 +44,7 @@ class Aligent_Briteverify_Model_Observer {
 
     protected function redirectInvalid($request, $errorMsg) {
         $session = Mage::getSingleton('core/session');
-        $session->$errorMsg();
+        $session->addError($errorMsg);
         $request->initForward()
             ->setControllerName('verify')
             ->setModuleName('verify')
