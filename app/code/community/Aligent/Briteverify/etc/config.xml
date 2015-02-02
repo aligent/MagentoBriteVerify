@@ -26,6 +26,28 @@
             </aligent_briteverify>
         </helpers>
     </global>
+    <frontend>
+        <events>
+            <controller_action_predispatch_newsletter_subscriber_new>
+                <observers>
+                    <aligent_briteverify>
+                        <type>singleton</type>
+                        <class>aligent_briteverify/observer</class>
+                        <method>newsletterSubscribePredispatch</method>
+                    </aligent_briteverify>
+                </observers>
+            </controller_action_predispatch_newsletter_subscriber_new>
+        </events>
+        <routers>
+            <verify>
+                <use>standard</use>
+                <args>
+                    <frontName>verify</frontName>
+                    <module>Aligent_Briteverify</module>
+                </args>
+            </verify>
+        </routers>
+    </frontend>
     <adminhtml>
         <acl>
             <resources>
